@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <img src="images/cropped-Nova-Schola-NTC-Batangas-Logos-7.png" alt="Nova Schola Logo" class="logo">
+
+    <div class="login-container">
+        <h2>Log in</h2>
+    
+        <form>
+            <div class="input-container">
+                <input type="text" id="username" name="username" required>
+                <label for="username">Username</label>
+            </div>
+    
+            <div class="input-container">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+    
+            <div class="remember-container">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+    
+            <button type="submit">Login</button>
+    
+            <br><br>
+            <a href="#">Forgot Password?</a>
+    
+            <p>Don't have an account? <a href="#">Register here</a></p>
+        </form>
+    </div>
+</body>
+</html>

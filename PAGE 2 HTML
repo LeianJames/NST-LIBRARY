@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NST E-Library</title>
+    <link rel="stylesheet" href="trylang.css">
+</head>
+<body>
+    <!-- First container section -->
+    <div class="container">
+        <!-- Top Header with School Name instead of logo -->
+        <div class="top-header">
+            <div class="school-name">Nova Schola Tanauan</div>
+        </div>
+    </div>
+    
+    <!-- First Horizontal Line -->
+    <div class="horizontal-line"></div>
+    
+    <!-- Navigation Bar with Title and Search -->
+    <div class="nav-wrapper">
+        <div class="nav-bar">
+            <h1>NST | E-LIBRARY</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search books, authors, subjects...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Grey section 1 -->
+    <div class="grey-section-1">
+        <!-- Second Horizontal Line -->
+        <div class="horizontal-line"></div>
+        
+        <!-- Help Button with arrow and dropdown -->
+        <div class="help-section">
+            <div class="help-button">
+                <button id="helpBtn">Help <span class="arrow"></span></button>
+                <div id="contactDetails" class="contact-details">
+                    <h3>Contact Details</h3>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> library@novaschola.edu</p>
+                    <p><strong>Librarian:</strong> Ms. Santos</p>
+                    <p><strong>Technical Support:</strong> Mr. Garcia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Grey section 2 -->
+    <div class="grey-section-2">
+        <!-- Third Horizontal Line -->
+        <div class="help-line"></div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="container">
+        <!-- Main Title -->
+        <div class="main-title">
+            <h2>Public Access Catalog</h2>
+        </div>
+        
+        <!-- Subject Circles - Using CSS Grid for perfect alignment -->
+        <div class="subject-grid">
+            <div class="subject-circle math">
+                <i class="icon">📐</i>
+                <span>Math</span>
+            </div>
+            <div class="subject-circle english">
+                <i class="icon">📚</i>
+                <span>English</span>
+            </div>
+            <div class="subject-circle science">
+                <i class="icon">🔬</i>
+                <span>Science</span>
+            </div>
+            <div class="subject-circle history">
+                <i class="icon">🏛️</i>
+                <span>History</span>
+            </div>
+            <div class="subject-circle language">
+                <i class="icon">🗣️</i>
+                <span>Language</span>
+            </div>
+            <div class="subject-circle cooking">
+                <i class="icon">🍳</i>
+                <span>Cooking</span>
+            </div>
+            <div class="subject-circle sports">
+                <i class="icon">🏀</i>
+                <span>Sports</span>
+            </div>
+            <div class="subject-circle news">
+                <i class="icon">📰</i>
+                <span>News</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer with Logo on the lower left -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-name">
+                <a href="https://www.facebook.com/NovaSchola" class="logo-link">
+                    <div class="logo-circle"></div>
+                </a>
+                Nova Schola Tanauan Library
+            </div>
+            <div class="footer-info">
+                <p><strong>Hours:</strong> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                <p><strong>Location:</strong> Main Building, 2nd Floor</p>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for the Help button functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

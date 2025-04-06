@@ -1,202 +1,171 @@
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
+    font-family: 'Nunito Sans', 'Segoe UI', Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    position: relative;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    line-height: 1.6;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 0 20px;
 }
 
-/* Header Styles */
-.top-header {
-    display: flex;
-    align-items: center;
-    padding: 1px 0;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.school-name {
-    font-size: 22px;
-    font-weight: bold;
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: #ffffff;
     color: #3a6ea5;
+    z-index: 9999;
 }
 
-/* Fixed horizontal line styles */
-.horizontal-line {
-    height: 2px;
+/* Top university bar */
+.top-university-bar {
+    background-color: #ffffff;
+    color: #02597b;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.top-university-bar a {
+    color: #3a6ea5; 
+    font-size: 16px;
+}
+
+/* Main header */
+.main-header {
     background-color: #3a6ea5;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    z-index: 10; /* Make sure lines appear above the backgrounds */
+    color: white;
+    padding: 15px 0;
 }
 
-/* Reduced spacing for the help section line */
-.help-line {
-    height: 2px;
-    background-color: #545454ed;
-    margin: 0;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    z-index: 10;
-}
-
-/* Navigation Bar - Blue background that extends edge to edge */
-.nav-wrapper {
-    background-color: #3a6ea5;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* Grey background section after the nav */
-.grey-section-1 {
-    background-color: #545454ed; /* Grey background */
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* Grey background for help section */
-.grey-section-2 {
-    background-color: #545454ed; /* Grey background */
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-
-.nav-bar {
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.nav-bar h1 {
-    color: #ffffff;
-    font-size: 28px;
+.logo {
+    font-size: 24px;
+    color: white;
     font-weight: bold;
 }
 
-.search-bar {
-    display: flex;
-    width: 40%;
+.user-links a {
+    margin-left: 20px;
+    color: white;
 }
 
-.search-bar input {
+.user-links a:hover {
+    text-decoration: underline;
+}
+
+/* Search section */
+.search-section {
+    background-color: #3a6ea5;
+    color: white;
+    padding: 10px 0 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-label {
+    font-size: 24px;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.dropdown-arrow {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.search-input-container {
+    display: flex;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-input-container input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border: none;
     border-radius: 4px 0 0 4px;
 }
 
-.search-bar button {
-    padding: 8px 15px;
-    background-color: #059ac3;
-    color: white;
+.search-input-container button {
+    background-color: white;
     border: none;
+    padding: 0 15px;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
 
-/* Help Button with arrow and dropdown */
+/* Help section */
 .help-section {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #5F574F;
+    color: white;
+    padding: 10px 0;
 }
 
-.help-button button {
-    padding: 4px 12px;
-    background-color: #1a89f8;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
+.help-link {
     display: flex;
     align-items: center;
+    color: white;
+    font-weight: bold;
 }
 
-.help-button button .arrow {
+.arrow {
+    font-size: 12px;
     margin-left: 5px;
-    font-size: 16px;
 }
 
-.contact-details {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    width: 250px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 100;
+/* Main content */
+main {
+    padding: 30px 0;
 }
 
-.contact-details.show {
-    display: block;
+.breadcrumbs {
+    margin-bottom: 20px;
+    color: #666;
 }
 
-.contact-details h3 {
-    margin-bottom: 8px;
+.breadcrumbs a {
     color: #3a6ea5;
 }
 
-.contact-details p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-/* Main Title */
 .main-title {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .main-title h2 {
@@ -205,7 +174,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Subject Circles - Fixed size and evenly distributed */
+/* Subject Circles */
 .subject-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -227,11 +196,13 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .subject-circle:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .subject-circle .icon {
@@ -252,19 +223,14 @@ body {
 footer {
     background-color: #3a6ea5;
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     margin-top: 30px;
-    position: relative;
-    width: 100%;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .footer-name {
@@ -273,6 +239,19 @@ footer {
     display: flex;
     align-items: center;
 }
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    background-image: url('images/logo-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+}
+
 
 .footer-info {
     text-align: right;
@@ -287,26 +266,49 @@ footer {
     text-decoration: underline;
 }
 
-/* Bottom logo - now positioned at the lower left and with proper link */
-.logo-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #3a6ea5;
-    font-weight: bold;
-    font-size: 12px;
-    margin-right: 15px;
-    border: 2px solid #fff;
-    background-image: url(images/logo-removebg-preview.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.logo-link {
-    text-decoration: none;
-    display: inline-block;
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .user-links {
+        margin-top: 10px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-label {
+        margin-bottom: 10px;
+    }
+    
+    .search-input-container {
+        width: 100%;
+    }
+    
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .subject-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
 }

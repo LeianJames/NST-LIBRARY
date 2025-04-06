@@ -5,68 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NST E-Library</title>
     <link rel="stylesheet" href="page2.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <script src="page2.js"></script>
-    <!-- First container section -->
-    <div class="container">
-        <!-- Top Header with School Name instead of logo -->
-        <div class="top-header">
-            <div class="school-name">Nova Schola Tanauan</div>
+    <!-- Top university name bar -->
+    <div class="top-university-bar">
+        <div class="container">
+            <a>Nova Schola Tanauan</a>
         </div>
     </div>
     
-    <!-- First Horizontal Line -->
-    <div class="horizontal-line"></div>
-    
-    <!-- Navigation Bar with Title and Search -->
-    <div class="nav-wrapper">
-        <div class="nav-bar">
-            <h1>NST | E-LIBRARY</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Search books, authors, subjects...">
-                <button type="submit">Search</button>
+    <!-- Main header with logo and links -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- paano ga alisen ang color blue ng link ditoo-->
+                    <a href="https://nst.edu.ph/">NST | University Library</a>
+
+                </div>
+                <div class="user-links">
+                    <a href="#">My Account</a>
+                    <a href="#">Feedback</a>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
     
-    <!-- Grey section 1 -->
-    <div class="grey-section-1">
-        <!-- Second Horizontal Line -->
-        <div class="horizontal-line"></div>
-        
-        <!-- Help Button with arrow and dropdown -->
-        <div class="help-section">
-            <div class="help-button">
-                <button id="helpBtn">Help <span class="arrow"></span></button>
-                <div id="contactDetails" class="contact-details">
-                    <h3>Contact Details</h3>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> library@novaschola.edu</p>
-                    <p><strong>Librarian:</strong> Ms. Santos</p>
-                    <p><strong>Technical Support:</strong> Mr. Garcia</p>
+    <!-- Search section -->
+    <div class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-label">
+                    Search all <span class="dropdown-arrow">▼</span>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="catalog + articles + website + more" aria-label="Search library catalog">
+                    <button type="submit" aria-label="Search"><span class="search-icon">🔍</span></button>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Grey section 2 -->
-    <div class="grey-section-2">
-        <!-- Third Horizontal Line -->
-        <div class="help-line"></div>
+    <!-- Help section -->
+    <div class="help-section">
+        <div class="container">
+            <a href="#" class="help-link">Help <span class="arrow">▶</span></a>
+        </div>
     </div>
     
     <!-- Main content -->
-    <div class="container">
+    <main id="main-content" class="container">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <span>" Search all covers all these sources "</span>
+        </div>
+        
         <!-- Main Title -->
         <div class="main-title">
             <h2>Public Access Catalog</h2>
         </div>
         
-        <!-- Subject Circles - Using CSS Grid for perfect alignment -->
+        <!-- Subject Circles -->
         <div class="subject-grid">
             <div class="subject-circle math">
                 <i class="icon">📐</i>
@@ -101,27 +104,37 @@
                 <span>News</span>
             </div>
         </div>
-    </div>
+    </main>
     
-    <!-- Footer with Logo on the lower left -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-name">
-                <a href="https://www.facebook.com/NovaSchola" class="logo-link">
-                    <div class="logo-circle"></div>
-                </a>
-                Nova Schola Tanauan Library
-            </div>
-            <div class="footer-info">
-                <p><strong>Hours:</strong> Mon-Fri: 8:00 AM - 5:00 PM</p>
-                <p><strong>Location:</strong> Main Building, 2nd Floor</p>
-                <p><a href="#">Contact Us</a></p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-name">
+                    <a href="#" class="logo-link">
+                        <div class="logo-circle"></div>
+                    </a>
+                    Nova Schola Tanauan Library
+                </div>
+                <div class="footer-info">
+                    <p><strong>Hours:</strong> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    <p><strong>Location:</strong> Building C 2nd Floor</p>
+                    <p><a href="#">Contact Us</a></p>
+                </div>
             </div>
         </div>
     </footer>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple script for help dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const helpLink = document.querySelector('.help-link');
+            helpLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Contact library staff at library@novaschola.edu or call (123) 456-7890');
+            });
+        });
+    </script>
 </body>
 </html>
